@@ -1,0 +1,45 @@
+@use 'sass:color';
+@use 'variables' as v;
+
+.button {
+  background-color: v.$color-lightest;
+  border: 1px solid v.$color-border;
+  border-radius: 4px;
+  color: v.$color-darkest;
+  cursor: pointer;
+  height: 2.5em;
+  outline: none;
+  padding: calc(.5em - 1px) 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+
+  &:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+  &:not(:last-child) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    margin-right: -1px;
+  }
+
+  &:hover {
+    border-color: color.scale(v.$color-border, $lightness: -20%);
+    color: v.$color-darkest;
+    z-index: 1;
+  }
+  &:focus,
+  &:active {
+    z-index: 2;
+  }
+  &:focus {
+    border-color: v.$color-primary;
+    color: v.$color-darkest;
+  }
+  &:active {
+    border-color: v.$color-darkest;
+    color: v.$color-darkest;
+  }
+}

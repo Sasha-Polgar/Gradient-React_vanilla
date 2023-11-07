@@ -1,0 +1,50 @@
+@use 'variables' as v;
+
+body {
+  font-family: sans-serif;
+}
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 450px;
+}
+
+.app {
+  padding: 3rem 0;
+}
+
+.nbColors {
+  background-color: v.$color-primary;
+  border-radius: 0 0 .5em .5em;
+  color: v.$color-lightest;
+  font-size: .8rem;
+  left: 50%;
+  padding: .3rem .6rem;
+  position: fixed;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.colors {
+  color: v.$color-darkest;
+  display: flex;
+  font-family: monospace;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  padding: 1rem;
+  text-shadow: 1px 1px 3px #999;
+}
+
+.gradient {
+  border-radius: 1rem;
+  height: 300px;
+  margin-bottom: 1rem;
+}
